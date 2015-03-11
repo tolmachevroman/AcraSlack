@@ -1,5 +1,7 @@
 package com.acra.slack.sample.network;
 
+import com.acra.slack.sample.network.requests.SlackMessageWrapper;
+
 import retrofit.Callback;
 import retrofit.http.Body;
 import retrofit.http.Headers;

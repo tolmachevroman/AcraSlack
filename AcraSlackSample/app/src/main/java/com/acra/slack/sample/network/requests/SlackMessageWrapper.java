@@ -19,7 +19,7 @@ public class SlackMessageWrapper {
 
     ArrayList<MessageAttachment> attachments;
 
-    public SlackMessageWrapper(String reportId, EnumMap<ReportField, String> report) {
+    public SlackMessageWrapper(String reportId, EnumMap<ReportField, String> report, String appName) {
         this.username = "crashbot#" + reportId;
         this.icon = ":crab:";
         this.attachments = new ArrayList<>();
@@ -30,7 +30,7 @@ public class SlackMessageWrapper {
         StringBuilder deviceInfoString = new StringBuilder();
         deviceInfoString.append(report.get(ReportField.BRAND) + " ");
         deviceInfoString.append(report.get(ReportField.PHONE_MODEL) + ", running Android version ");
-        deviceInfoString.append(report.get(ReportField.ANDROID_VERSION) + ", application version ");
+        deviceInfoString.append(report.get(ReportField.ANDROID_VERSION) + ", " + appName + " version ");
         deviceInfoString.append(report.get(ReportField.APP_VERSION_CODE));
 
         MessageAttachment generalInfoAttachment = new MessageAttachment("", "Device info" , deviceInfoString.toString(), "#36a64f");

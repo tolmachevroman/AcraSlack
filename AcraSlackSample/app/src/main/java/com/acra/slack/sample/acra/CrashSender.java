@@ -2,6 +2,7 @@ package com.acra.slack.sample.acra;
 
 import android.content.Context;
 
+import com.acra.slack.sample.R;
 import com.acra.slack.sample.network.ClientApi;
 
 import org.acra.ReportField;
@@ -27,6 +28,6 @@ public class CrashSender implements ReportSender {
         report.put(ReportField.PHONE_MODEL, errorContent.get(ReportField.PHONE_MODEL));
         report.put(ReportField.STACK_TRACE, errorContent.get(ReportField.STACK_TRACE));
 
-        ClientApi.sendSlackMessage(errorContent.getProperty(ReportField.REPORT_ID), report);
+        ClientApi.sendSlackMessage(errorContent.getProperty(ReportField.REPORT_ID), report, context.getString(R.string.app_name));
     }
 }

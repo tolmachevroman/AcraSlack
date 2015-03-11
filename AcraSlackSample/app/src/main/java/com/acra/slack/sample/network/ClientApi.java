@@ -51,12 +51,14 @@ public class ClientApi {
 
     /**
      * Send message to your Slack channel defined in {@link com.acra.slack.sample.network.Urls}
+     *
      * @param reportId Report id
-     * @param report Map with report fields
+     * @param report   Map with report fields
+     * @param appName  Application name
      */
-    public static void sendSlackMessage(String reportId, EnumMap<ReportField, String> report) {
+    public static void sendSlackMessage(String reportId, EnumMap<ReportField, String> report, String appName) {
 
-        serviceSlack.sendCrash(new SlackMessageWrapper(reportId, report), new Callback<String>() {
+        serviceSlack.sendCrash(new SlackMessageWrapper(reportId, report, appName), new Callback<String>() {
             @Override
             public void success(String s, Response response) {
             }

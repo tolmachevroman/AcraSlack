@@ -26,4 +26,5 @@ dependencies {
     compile 'com.squareup.okhttp:okhttp:2.2.0'
     compile 'com.squareup.okhttp:okhttp-urlconnection:2.2.0'
     compile 'com.google.code.gson:gson:2.3'
+    compile 'ch.acra:acra:4.6.1'
 }

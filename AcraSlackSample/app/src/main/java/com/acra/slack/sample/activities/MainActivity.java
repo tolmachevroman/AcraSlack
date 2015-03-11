@@ -1,9 +1,11 @@
-package com.acra.slack.sample;
+package com.acra.slack.sample.activities;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import com.acra.slack.sample.R;
 
 
 public class MainActivity extends ActionBarActivity {

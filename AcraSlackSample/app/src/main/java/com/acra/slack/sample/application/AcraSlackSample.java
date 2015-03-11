@@ -1,10 +1,8 @@
 package com.acra.slack.sample.application;
 
 import android.app.Application;
-import android.content.Context;
-import android.content.SharedPreferences;
 
-import com.acra.slack.sample.R;
+import com.acra.slack.sample.acra.CrashSender;
 import com.acra.slack.sample.network.ClientApi;
 
 import org.acra.ACRA;

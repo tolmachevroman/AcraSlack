@@ -27,11 +27,12 @@ public class AcraSlackSample extends Application {
 
 ![webhooks](https://cloud.githubusercontent.com/assets/560815/6597120/01576862-c7d9-11e4-87fa-d5ba8e138e78.png)
 
-###### Create new channel for bugs tracking and copy it's url to Urls class
+###### Create new channel for bugs only and copy it's url to Urls class
 
 ![webhooks2](https://cloud.githubusercontent.com/assets/560815/6597144/32e481da-c7d9-11e4-8b20-96aacfcb0c0e.png)
 
 ```
+public static final String SLACK_ENDPOINT = "https://hooks.slack.com/services";
 public static final String SLACK_CRASH_CHANNEL = "/M03H6CG1F/B07V91KN6/T8HANY51iQygHlckHX8KQ0Zk";
 ```
 ###### For more info, please check official documentation (https://api.slack.com/incoming-webhooks)
